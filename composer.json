@@ -1,0 +1,13 @@
+{
+    "name": "frosh/emotion-no-ajax",
+    "keywords": ["shopware", "performance"],
+    "description": "include Emotion instead of load via ajax",
+    "license": "MIT",
+    "type": "shopware-plugin",
+    "extra": {
+        "installer-name": "FroshEmotionInclude"
+    },
+    "require": {
+        "composer/installers": "~1.0"
+    },
+}

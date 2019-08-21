@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="frosh_emotion_no_ajax.view_dir">%frosh_emotion_no_ajax.plugin_dir%/Resources/EmotionNoAjax</parameter>
+    </parameters>
+
+    <services>
+        <service id="frosh_emotion_no_ajax.subscriber.template" class="FroshEmotionNoAjax\Subscriber\TemplateSubscriber">
+            <argument>%frosh_emotion_no_ajax.view_dir%</argument>
+            <argument>%shopware.release.version%</argument>
+            <tag name="shopware.event_subscriber"/>
+        </service>
+    </services>
+
+</container>
